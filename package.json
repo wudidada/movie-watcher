@@ -1,0 +1,12 @@
+{
+  "name": "movie-watcher",
+  "version": "1.0.0",
+  "description": "watch movie files",
+  "main": "index.js",
+  "author": "jusbin",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chokidar": "^3.5.1"
+  }
+}
