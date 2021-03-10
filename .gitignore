@@ -2,3 +2,6 @@
 /.vscode
 /node_modules
 /test.js
+filelist.js
+filelist.js.sample
+files.rec

@@ -105,12 +105,12 @@ async function add(file) {
     log(`processed before: ${fileName} -> ${files[fileName]} [${file}]`);
     return;
   }
-  files[fileName] = null;
 
   let cid = fileName[fileName];
   if (!cid) {
     const response = await getCid(fileName);
     if (response.data.length == 0) {
+      files[fileName] = null;
       log(`get cid faild: ${fileName} [${file}]`);
     } else if (response.data.length > 1) {
       log(
@@ -118,6 +118,7 @@ async function add(file) {
           (value) => value.cid
         )} [${file}]`
       );
+      files[fileName] = cid;
     } else {
       cid = response.data[0].cid;
       files[fileName] = cid;
