@@ -52,7 +52,8 @@ watcher
   .on("add", add)
   .on("change", add)
   .on("unlink", del)
-  .on("ready", () => log("ready."));
+  .on("ready", () => log("ready."))
+  .on("error", (error) => log(`Watcher error: ${error}`));
 
 function ready() {
   for (const file of newFiles) {
